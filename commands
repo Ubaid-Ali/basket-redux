@@ -1,3 +1,10 @@
-// History of commands
+// HISTORY OF COMMANDS THIS PROJECT
 
-// npx create-react-app basket-redux --template typescript
+
+//1// npx create-react-app basket-redux --template typescript
+
+//2// npm install --save redux @types/redux
+
+//3// npm install --save react-redux @types/react-redux
+
+//4// yarn add @reduxjs/toolkit
