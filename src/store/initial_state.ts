@@ -14,7 +14,7 @@ const INITIAL_STATE: product_Type[] = [
         title: 'Black jacket',
         description: 'Black jacket for Men, Best choice for full winter collection',
         price: 125,
-        imageURL: `https://github.com/Ubaid-Ali/basket-redux/blob/master/src/images/Black%20jacket%20.jpg?raw=true`,
+        imageURL: `https://github.com/Ubaid-Ali/basket-redux/blob/master/src/images/Black-jacket.jpg?raw=true`,
         added: false
     },
     {
