@@ -14,7 +14,7 @@ const INITIAL_STATE: product_Type[] = [
         title: 'Black jacket',
         description: 'Black jacket for Men, Best choice for full winter collection',
         price: 125,
-        imageURL: '/images/logo.png',
+        imageURL: `https://github.com/Ubaid-Ali/basket-redux/blob/master/src/images/Black%20jacket%20.jpg?raw=true`,
         added: false
     },
     {
@@ -22,7 +22,7 @@ const INITIAL_STATE: product_Type[] = [
         title: 'black-and-white-jacket',
         description: 'black-and-white-jacket for Men, Best choice for full winter collection',
         price: 205,
-        imageURL: '/images/black-and-white-jacket.jpeg',
+        imageURL: 'https://github.com/Ubaid-Ali/basket-redux/blob/master/src/images/black-and-white-jacket.jpeg?raw=true',
         added: false
     },
     {
@@ -30,7 +30,7 @@ const INITIAL_STATE: product_Type[] = [
         title: 'Brown Sleeve Solid Jacket',
         description: 'Brown Sleeve Solid Jacket for Men, Best choice for full winter collection',
         price: 199,
-        imageURL: '/images/Brown Sleeve Solid Jacket.jpeg',
+        imageURL: 'https://github.com/Ubaid-Ali/basket-redux/blob/master/src/images/Brown%20Sleeve%20Solid%20Jacket.jpeg?raw=true',
         added: false
     },
     {
@@ -38,7 +38,7 @@ const INITIAL_STATE: product_Type[] = [
         title: 'dark-black-jacket',
         description: 'dark-black-jacket for Men, Best choice for full winter collection',
         price: 180,
-        imageURL: './images/dark-black-jacket.jpeg',
+        imageURL: 'https://github.com/Ubaid-Ali/basket-redux/blob/master/src/images/dark-black-jacket.jpeg?raw=true',
         added: false
     },
     {
@@ -46,7 +46,7 @@ const INITIAL_STATE: product_Type[] = [
         title: 'dark-purple-jacket',
         description: 'dark-purple-jacket for Men, Best choice for full winter collection',
         price: 227,
-        imageURL: './images/dark-purple-jacket.jpeg',
+        imageURL: 'https://github.com/Ubaid-Ali/basket-redux/blob/master/src/images/dark-purple-jacket.jpeg?raw=true',
         added: false
     },
     {
@@ -54,7 +54,7 @@ const INITIAL_STATE: product_Type[] = [
         title: 'gray-jacket',
         description: 'gray-jacket for Men, Best choice for full winter collection',
         price: 145,
-        imageURL: './images/gray-jacket.jpeg',
+        imageURL: 'https://github.com/Ubaid-Ali/basket-redux/blob/master/src/images/gray-jacket.jpeg?raw=true',
         added: false
     },
     {
@@ -62,7 +62,7 @@ const INITIAL_STATE: product_Type[] = [
         title: 'Hoodies Cotton Long Sleeve Solid Jacket',
         description: 'Hoodies Cotton Long Sleeve Solid Jacket for Men, Best choice for full winter collection',
         price: 300,
-        imageURL: './images/Hoodies Cotton Long Sleeve Solid Jacket.jpeg',
+        imageURL: 'https://github.com/Ubaid-Ali/basket-redux/blob/master/src/images/Hoodies%20Cotton%20Long%20Sleeve%20Solid%20Jacket.jpeg?raw=true',
         added: false
     },
     {
@@ -70,7 +70,7 @@ const INITIAL_STATE: product_Type[] = [
         title: 'nike-blue-gray-jacket',
         description: 'nike-blue-gray-jacket for Men, Best choice for full winter collection',
         price: 160,
-        imageURL: './images/nike-blue-gray-jacket.jpeg',
+        imageURL: 'https://github.com/Ubaid-Ali/basket-redux/blob/master/src/images/nike-blue-gray-jacket.jpeg?raw=true',
         added: false
     },
     {
@@ -78,7 +78,7 @@ const INITIAL_STATE: product_Type[] = [
         title: 'Nike Kobe Full Zip',
         description: 'Nike Kobe Full Zip for Men, Best choice for full winter collection',
         price: 170,
-        imageURL: './images/Nike Kobe Full Zip.jpeg',
+        imageURL: 'https://github.com/Ubaid-Ali/basket-redux/blob/master/src/images/Nike%20Kobe%20Full%20Zip.jpeg?raw=true',
         added: false
     },
     {
@@ -86,7 +86,7 @@ const INITIAL_STATE: product_Type[] = [
         title: 'Noelito Flow',
         description: 'Noelito Flow, Best choice for full winter collection',
         price: 137,
-        imageURL: './images/Noelito Flow.jpeg',
+        imageURL: 'https://github.com/Ubaid-Ali/basket-redux/blob/master/src/images/Noelito%20Flow.jpeg?raw=true',
         added: false
     },
     {
@@ -94,7 +94,7 @@ const INITIAL_STATE: product_Type[] = [
         title: 'red-jacket',
         description: 'red-jacket, Best choice for full winter collection',
         price: 210,
-        imageURL: './images/red-jacket.jpeg',
+        imageURL: 'https://github.com/Ubaid-Ali/basket-redux/blob/master/src/images/red-jacket.jpeg?raw=true',
         added: false
     },
     {
@@ -102,7 +102,7 @@ const INITIAL_STATE: product_Type[] = [
         title: 'We Know Game casual',
         description: 'We Know Game casual, Best choice for full winter collection',
         price: 186,
-        imageURL: './images/We Know Game casual.jpeg',
+        imageURL: 'https://github.com/Ubaid-Ali/basket-redux/blob/master/src/images/We%20Know%20Game%20casual.jpeg?raw=true',
         added: false
     },
     {
@@ -110,10 +110,8 @@ const INITIAL_STATE: product_Type[] = [
         title: 'white-jacket',
         description: 'white-jacket, Best choice for full winter collection',
         price: 190,
-        imageURL: './images/white-jacket.jpeg',
+        imageURL: 'https://github.com/Ubaid-Ali/basket-redux/blob/master/src/images/white-jacket.jpeg?raw=true',
         added: false
     }
 ];
-
-
 export { INITIAL_STATE };
