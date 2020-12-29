@@ -1,6 +1,6 @@
 
 export interface product_Type {
-    id: string,
+    id: number,
     title: string,
     description: string,
     price: number,
@@ -10,7 +10,7 @@ export interface product_Type {
 
 const INITIAL_STATE: product_Type[] = [
     {
-        id: 'Black jacket',
+        id: 1,
         title: 'Black jacket',
         description: 'Black jacket for Men, Best choice for full winter collection',
         price: 125,
@@ -18,7 +18,7 @@ const INITIAL_STATE: product_Type[] = [
         added: false
     },
     {
-        id: 'black-and-white-jacket',
+        id: 2,
         title: 'black-and-white-jacket',
         description: 'black-and-white-jacket for Men, Best choice for full winter collection',
         price: 205,
@@ -26,7 +26,7 @@ const INITIAL_STATE: product_Type[] = [
         added: false
     },
     {
-        id: 'Brown Sleeve Solid Jacket',
+        id: 3,
         title: 'Brown Sleeve Solid Jacket',
         description: 'Brown Sleeve Solid Jacket for Men, Best choice for full winter collection',
         price: 199,
@@ -34,7 +34,7 @@ const INITIAL_STATE: product_Type[] = [
         added: false
     },
     {
-        id: 'dark-black-jacket',
+        id: 4,
         title: 'dark-black-jacket',
         description: 'dark-black-jacket for Men, Best choice for full winter collection',
         price: 180,
@@ -42,7 +42,7 @@ const INITIAL_STATE: product_Type[] = [
         added: false
     },
     {
-        id: 'dark-purple-jacket',
+        id: 5,
         title: 'dark-purple-jacket',
         description: 'dark-purple-jacket for Men, Best choice for full winter collection',
         price: 227,
@@ -50,7 +50,7 @@ const INITIAL_STATE: product_Type[] = [
         added: false
     },
     {
-        id: 'gray-jacket',
+        id: 6,
         title: 'gray-jacket',
         description: 'gray-jacket for Men, Best choice for full winter collection',
         price: 145,
@@ -58,7 +58,7 @@ const INITIAL_STATE: product_Type[] = [
         added: false
     },
     {
-        id: 'Hoodies Cotton Long Sleeve Solid Jacket',
+        id: 7,
         title: 'Hoodies Cotton Long Sleeve Solid Jacket',
         description: 'Hoodies Cotton Long Sleeve Solid Jacket for Men, Best choice for full winter collection',
         price: 300,
@@ -66,7 +66,7 @@ const INITIAL_STATE: product_Type[] = [
         added: false
     },
     {
-        id: 'nike-blue-gray-jacket',
+        id: 8,
         title: 'nike-blue-gray-jacket',
         description: 'nike-blue-gray-jacket for Men, Best choice for full winter collection',
         price: 160,
@@ -74,7 +74,7 @@ const INITIAL_STATE: product_Type[] = [
         added: false
     },
     {
-        id: 'Nike Kobe Full Zip',
+        id: 9,
         title: 'Nike Kobe Full Zip',
         description: 'Nike Kobe Full Zip for Men, Best choice for full winter collection',
         price: 170,
@@ -82,7 +82,7 @@ const INITIAL_STATE: product_Type[] = [
         added: false
     },
     {
-        id: 'Noelito Flow',
+        id: 10,
         title: 'Noelito Flow',
         description: 'Noelito Flow, Best choice for full winter collection',
         price: 137,
@@ -90,7 +90,7 @@ const INITIAL_STATE: product_Type[] = [
         added: false
     },
     {
-        id: 'red-jacket',
+        id: 11,
         title: 'red-jacket',
         description: 'red-jacket, Best choice for full winter collection',
         price: 210,
@@ -98,7 +98,7 @@ const INITIAL_STATE: product_Type[] = [
         added: false
     },
     {
-        id: 'We Know Game casual',
+        id: 12,
         title: 'We Know Game casual',
         description: 'We Know Game casual, Best choice for full winter collection',
         price: 186,
@@ -106,7 +106,7 @@ const INITIAL_STATE: product_Type[] = [
         added: false
     },
     {
-        id: 'white-jacket',
+        id: 13,
         title: 'white-jacket',
         description: 'white-jacket, Best choice for full winter collection',
         price: 190,

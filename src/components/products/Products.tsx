@@ -85,7 +85,7 @@ export default function Products() {
 
                                     {/* shopping cart icon */}
                                     <IconButton
-                                        onClick={() => dispatch(addBasket())}
+                                        onClick={() => dispatch(addBasket(product))}
                                     >
                                         <AddShoppingCartIcon />
                                     </IconButton>
