@@ -61,7 +61,7 @@ function Basket() {
                     }
 
                     <div className="total">
-                        Total <span className="total_amount"> ${total}.00</span>
+                        Total <span className="total_amount"> ${total}</span>
                     </div>
                 </Paper>
             </Grid>

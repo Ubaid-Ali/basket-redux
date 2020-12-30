@@ -66,7 +66,6 @@ export default function Products() {
                                 {/* title */}
                                 <Typography className={classes.title}>
                                     <span>{product.title}</span>
-                                    <hr />
                                 </Typography>
 
                                 {/* image */}
