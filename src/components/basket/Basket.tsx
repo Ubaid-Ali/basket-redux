@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { selectBasket, removeBasket } from './basket_Slice';
 import { product_Type } from '../../store/initial_state';
+import './basket.css';
 import IMAGE from './cart.png';
 
 // Mmaterial ui
@@ -10,6 +11,8 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
+import Button from '@material-ui/core/Button';
+
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -19,7 +22,7 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         paper: {
             padding: theme.spacing(2),
-            margin: 'auto',
+            margin: '10px auto',
             maxWidth: 500,
         },
         image: {
@@ -40,24 +43,35 @@ function Basket() {
     const basketList = useSelector(selectBasket);
     const dispatch = useDispatch();
 
-    // Total Bill
+    // Total Amount
     let total: number = 0;
     for (let item of basketList) {
         total += item.price
     }
-    // console.log('total', total);
-
 
     return (
-        <div >
-            {basketList.length === 0 ? <img src={IMAGE} alt='basket' /> : null}
-            <div>Total: $ {total}</div>
+        <div className="basket_container">
+            <Grid item xs={12}>
+                <Paper className={classes.paper}>
+                    <img src={IMAGE} alt='basket' className="cart-img" />
+
+                    {basketList.length === 0 ?
+                        <div><p>Basket is Empty</p></div> :
+                        null
+                    }
+
+                    <div className="total">
+                        Total <span className="total_amount"> ${total}.00</span>
+                    </div>
+                </Paper>
+            </Grid>
+
             {basketList.map((product: product_Type) => {
                 let { title, imageURL, price, id } = product;
                 return (
                     <div className={classes.root} key={id}>
                         <Paper className={classes.paper} elevation={3}>
-                            <Grid container spacing={2}>
+                            <Grid container spacing={2} className='basket_item'>
                                 <Grid item>
                                     <ButtonBase className={classes.image}>
                                         <img className={classes.img} alt="complex" src={imageURL} />
@@ -67,18 +81,18 @@ function Basket() {
                                     <Grid item xs container direction="column" spacing={2}>
                                         <Grid item xs>
                                             <Typography gutterBottom variant="subtitle1">
-                                                Item
+                                                Product
                                             </Typography>
                                             <Typography variant="body2" gutterBottom>
                                                 {title}
                                             </Typography>
                                             <Typography variant="body2" color="textSecondary">
-                                                {id}
+                                                Quantity: 1
                                             </Typography>
                                         </Grid>
                                         <Grid item>
                                             <Typography onClick={() => dispatch(removeBasket(id))} variant="body2" style={{ cursor: 'pointer' }}>
-                                                Remove
+                                                <Button color="secondary">remove</Button>
                                             </Typography>
                                         </Grid>
                                     </Grid>

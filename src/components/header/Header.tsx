@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme: Theme) =>
         grow: {
             flexGrow: 1,
         },
+        toolbar: {
+            background: 'radial-gradient(circle, rgba(174,238,237,0.9976365546218487) 0%, rgba(155,148,233,1) 100%)',
+        },
         menuButton: {
             marginRight: theme.spacing(2),
         },
@@ -26,17 +29,7 @@ const useStyles = makeStyles((theme: Theme) =>
                 display: 'block',
             },
         },
-        searchIcon: {
-            padding: theme.spacing(0, 2),
-            height: '100%',
-            position: 'absolute',
-            pointerEvents: 'none',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-        },
         sectionDesktop: {
-            border: '1px solid black',
             [theme.breakpoints.up('md')]: {
                 display: 'flex',
             },
@@ -59,7 +52,7 @@ const Header: React.FC<Props> = ({ setPage }) => {
     return (
         <div className={classes.grow}>
             <AppBar position="static">
-                <Toolbar>
+                <Toolbar className={classes.toolbar}>
 
                     <IconButton
                         onClick={() => setPage('products')}

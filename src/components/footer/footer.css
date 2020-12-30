@@ -1,0 +1,14 @@
+
+.footer_container {
+    border-top: 2px solid gray;
+    margin-top: 15px;
+}
+
+.footer_grid {
+    background-image: url('./wall.jpg');
+    background-attachment: fixed;
+}
+
+.footer_paper {
+    min-height: 400px;
+}

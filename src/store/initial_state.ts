@@ -66,14 +66,6 @@ const INITIAL_STATE: product_Type[] = [
         added: false
     },
     {
-        id: 8,
-        title: 'nike-blue-gray-jacket',
-        description: 'nike-blue-gray-jacket for Men, Best choice for full winter collection',
-        price: 160,
-        imageURL: 'https://github.com/Ubaid-Ali/basket-redux/blob/master/src/images/nike-blue-gray-jacket.jpeg?raw=true',
-        added: false
-    },
-    {
         id: 9,
         title: 'Nike Kobe Full Zip',
         description: 'Nike Kobe Full Zip for Men, Best choice for full winter collection',

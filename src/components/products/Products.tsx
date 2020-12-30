@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
     },
+    product_div: {
+        marginTop: '10px'
+    },
     paper: {
         padding: theme.spacing(2),
         textAlign: 'center',
@@ -26,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     },
     paper2: {
         textAlign: 'center',
-        height: '100%'
+        height: '100%',
     },
     image_css: {
         width: '80%',
@@ -57,11 +60,13 @@ export default function Products() {
 
                 {productList.map((product: product_Type) => {
                     return (
-                        <Grid item xs={6} sm={4} key={product.id}>
+                        <Grid item xs={6} sm={4} key={product.id} className={classes.product_div}>
                             <Paper className={classes.paper} elevation={3}>
+
                                 {/* title */}
                                 <Typography className={classes.title}>
                                     <span>{product.title}</span>
+                                    <hr />
                                 </Typography>
 
                                 {/* image */}
