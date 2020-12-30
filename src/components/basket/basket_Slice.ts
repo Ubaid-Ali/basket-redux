@@ -10,9 +10,10 @@ export const basket_Slice = createSlice({
     reducers: {
 
         addBasket: (state, action) => {
-            let match = state.find((obj) => obj.id === action.payload.id)
-            if (!match) {
-                state.push(action.payload)
+            let haveInBasket = state.find((obj) => obj.id === action.payload.id)
+            if (!haveInBasket) {
+                state.push(action.payload);
+                // state.push({...action.payload,  added: true})
             }
         },
 

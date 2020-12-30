@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectProducts } from './products_Slice';
+import { selectProducts, productAdded } from './products_Slice';
 import { addBasket } from '../basket/basket_Slice';
 import { product_Type } from '../../store/initial_state';
 
@@ -11,10 +11,10 @@ import Grid from '@material-ui/core/Grid';
 import { Typography } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
-import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined';
-import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
+import DoneOutlineOutlinedIcon from '@material-ui/icons/DoneOutlineOutlined';
+import NotListedLocationOutlinedIcon from '@material-ui/icons/NotListedLocationOutlined';
 
-// css
+// css material ui
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
@@ -48,12 +48,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 // Component
-export default function Products() {
+const Products = () => {
+
     const classes = useStyles();
-
-    const productList = useSelector(selectProducts);
     const dispatch = useDispatch()
+    const productList = useSelector(selectProducts);
 
+
+    // console.log('productList', productList);
     return (
         <div className={classes.root}>
             <Grid container spacing={3}>
@@ -64,9 +66,7 @@ export default function Products() {
                             <Paper className={classes.paper} elevation={3}>
 
                                 {/* title */}
-                                <Typography className={classes.title}>
-                                    <span>{product.title}</span>
-                                </Typography>
+                                <Typography className={classes.title}> {product.title} </Typography>
 
                                 {/* image */}
                                 <Paper elevation={0} className={classes.paper2}>
@@ -77,11 +77,11 @@ export default function Products() {
                                     />
                                 </Paper>
 
-                                {/* like icon */}
                                 <Typography className={classes.text}>
+
+                                    {/* CheckMark Icon */}
                                     <IconButton>
-                                        <ThumbUpAltOutlinedIcon />
-                                        <ThumbUpAltIcon />
+                                        {product.added ? <DoneOutlineOutlinedIcon /> : <NotListedLocationOutlinedIcon />}
                                     </IconButton>
 
                                     {/* price */}
@@ -89,10 +89,14 @@ export default function Products() {
 
                                     {/* shopping cart icon */}
                                     <IconButton
-                                        onClick={() => dispatch(addBasket(product))}
+                                        onClick={() => {
+                                            dispatch(addBasket(product))
+                                            dispatch(productAdded(product.id))
+                                        }}
                                     >
                                         <AddShoppingCartIcon />
                                     </IconButton>
+
                                 </Typography>
                             </Paper>
                         </Grid>
@@ -103,3 +107,5 @@ export default function Products() {
         </div>
     );
 };
+
+export default Products;

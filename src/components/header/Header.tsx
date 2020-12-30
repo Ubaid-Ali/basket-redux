@@ -1,5 +1,5 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 import { selectBasket } from '../basket/basket_Slice';
 
 // material ui
@@ -56,7 +56,7 @@ const Header: React.FC<Props> = ({ setPage }) => {
 
                     <IconButton
                         onClick={() => setPage('products')}
-                        aria-label="show 4 new mails" color="inherit">
+                        aria-label="show products" color="inherit">
                         <HomeRoundedIcon fontSize="large" />
                     </IconButton>
 
@@ -69,10 +69,12 @@ const Header: React.FC<Props> = ({ setPage }) => {
                     <div className={classes.sectionDesktop}>
                         <IconButton
                             onClick={() => setPage('basket')}
-                            aria-label="show 4 new mails" color="inherit">
+                            aria-label="show basket length" color="inherit"
+                        >
                             <Badge badgeContent={productList.length} color="secondary">
                                 <ShoppingCartIcon />
                             </Badge>
+
                         </IconButton>
                     </div>
 

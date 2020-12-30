@@ -1,6 +1,7 @@
-import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { selectBasket, removeBasket } from './basket_Slice';
+import { productRemove } from '../products/products_Slice';
 import { product_Type } from '../../store/initial_state';
 import './basket.css';
 import IMAGE from './cart.png';
@@ -38,31 +39,31 @@ const useStyles = makeStyles((theme: Theme) =>
     }),
 );
 
+// Component
 function Basket() {
     const classes = useStyles();
-    const basketList = useSelector(selectBasket);
     const dispatch = useDispatch();
+    const basketList = useSelector(selectBasket);
 
     // Total Amount
     let total: number = 0;
     for (let item of basketList) {
-        total += item.price
+        total += item.price;
     }
 
+    // console.log('basketList', basketList);
     return (
         <div className="basket_container">
+
             <Grid item xs={12}>
                 <Paper className={classes.paper}>
+
                     <img src={IMAGE} alt='basket' className="cart-img" />
-
-                    {basketList.length === 0 ?
-                        <div><p>Basket is Empty</p></div> :
-                        null
-                    }
-
+                    {basketList.length === 0 ? <div> Basket is Empty </div> : null}
                     <div className="total">
-                        Total <span className="total_amount"> ${total}</span>
+                        Total <span className="total_amount">${total}</span>
                     </div>
+
                 </Paper>
             </Grid>
 
@@ -72,30 +73,37 @@ function Basket() {
                     <div className={classes.root} key={id}>
                         <Paper className={classes.paper} elevation={3}>
                             <Grid container spacing={2} className='basket_item'>
+
                                 <Grid item>
                                     <ButtonBase className={classes.image}>
                                         <img className={classes.img} alt="complex" src={imageURL} />
                                     </ButtonBase>
                                 </Grid>
+
                                 <Grid item xs={12} sm container>
                                     <Grid item xs container direction="column" spacing={2}>
+
                                         <Grid item xs>
-                                            <Typography gutterBottom variant="subtitle1">
-                                                Product
-                                            </Typography>
-                                            <Typography variant="body2" gutterBottom>
-                                                {title}
-                                            </Typography>
-                                            <Typography variant="body2" color="textSecondary">
-                                                Quantity: 1
-                                            </Typography>
+                                            <Typography gutterBottom variant="subtitle1">Product</Typography>
+                                            <Typography variant="body2" gutterBottom>{title}</Typography>
+                                            <Typography variant="body2" color="textSecondary">Quantity: 1</Typography>
                                         </Grid>
+
                                         <Grid item>
-                                            <Typography onClick={() => dispatch(removeBasket(id))} variant="body2" style={{ cursor: 'pointer' }}>
+                                            <Typography
+                                                onClick={() => {
+                                                    dispatch(removeBasket(id))
+                                                    dispatch(productRemove(id))
+                                                }}
+                                                variant="body2"
+                                                style={{ cursor: 'pointer' }}
+                                            >
                                                 <Button color="secondary">remove</Button>
                                             </Typography>
                                         </Grid>
+
                                     </Grid>
+
                                     <Grid item>
                                         <Typography variant="subtitle1">${price}</Typography>
                                     </Grid>
