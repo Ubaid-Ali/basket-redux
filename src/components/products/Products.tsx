@@ -48,14 +48,14 @@ const useStyles = makeStyles((theme) => ({
 export default function Products() {
     const classes = useStyles();
 
-    const list = useSelector(selectProducts);
+    const productList = useSelector(selectProducts);
     const dispatch = useDispatch()
 
     return (
         <div className={classes.root}>
             <Grid container spacing={3}>
 
-                {list.map((product: product_Type) => {
+                {productList.map((product: product_Type) => {
                     return (
                         <Grid item xs={6} sm={4} key={product.id}>
                             <Paper className={classes.paper} elevation={3}>

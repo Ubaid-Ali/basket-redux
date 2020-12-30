@@ -52,7 +52,7 @@ interface Props {
 const Header: React.FC<Props> = ({ setPage }) => {
     const classes = useStyles();
 
-    const data = useSelector(selectBasket)
+    const productList = useSelector(selectBasket);
 
 
     // RETURN
@@ -60,26 +60,29 @@ const Header: React.FC<Props> = ({ setPage }) => {
         <div className={classes.grow}>
             <AppBar position="static">
                 <Toolbar>
-                    <Typography className={classes.title} variant="h6" noWrap>
-                        B/\SKET REDUX
-                    </Typography>
+
                     <IconButton
                         onClick={() => setPage('products')}
                         aria-label="show 4 new mails" color="inherit">
-
                         <HomeRoundedIcon fontSize="large" />
                     </IconButton>
 
+                    <Typography className={classes.title} variant="h6" noWrap>
+                        B/\SKET REDUX
+                    </Typography>
+
                     <div className={classes.grow} />
+
                     <div className={classes.sectionDesktop}>
                         <IconButton
                             onClick={() => setPage('basket')}
                             aria-label="show 4 new mails" color="inherit">
-                            <Badge badgeContent={4} color="secondary">
+                            <Badge badgeContent={productList.length} color="secondary">
                                 <ShoppingCartIcon />
                             </Badge>
                         </IconButton>
                     </div>
+
                 </Toolbar>
             </AppBar>
         </div>

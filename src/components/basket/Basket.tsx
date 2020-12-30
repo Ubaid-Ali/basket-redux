@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { selectBasket, removeBasket } from './basket_Slice';
 import { product_Type } from '../../store/initial_state';
+import IMAGE from './cart.png';
 
 // Mmaterial ui
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
@@ -36,13 +37,21 @@ const useStyles = makeStyles((theme: Theme) =>
 
 function Basket() {
     const classes = useStyles();
-
     const basketList = useSelector(selectBasket);
     const dispatch = useDispatch();
 
-    console.log('basket', basketList)
+    // Total Bill
+    let total: number = 0;
+    for (let item of basketList) {
+        total += item.price
+    }
+    // console.log('total', total);
+
+
     return (
         <div >
+            {basketList.length === 0 ? <img src={IMAGE} alt='basket' /> : null}
+            <div>Total: $ {total}</div>
             {basketList.map((product: product_Type) => {
                 let { title, imageURL, price, id } = product;
                 return (
